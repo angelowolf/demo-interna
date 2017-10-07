@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
-import SitiosListado from '@/components/sitios/SitiosListado'
+import SitiosListado from '@/components/sitios/listado/SitiosListado'
 
 Vue.use(Router)
 

@@ -16,8 +16,8 @@
     <tabla titulo="Usuarios" :buscando="buscando" :data="data" :columnas="columnas" :titulos="titulos" :acciones="acciones" :paginacion="paginacion" @consultar="consultar" @editar="editar" @eliminar="eliminar"></tabla>
 
 
-    <b-modal title="Modal title" v-model="modalAlta" @ok="modalAlta = false">
-      FORMULARIO MAGICO
+    <b-modal title="Modal title" v-model="modalAlta" @ok="modalAlta = false" size="lg">
+      <sitios-form v-if="modalAlta"></sitios-form>
     </b-modal>
     <b-modal title="Eliminar Usuario" v-model="modalEliminar" @ok="confimrarEliminarUsuario" ok-title="Si" cancel-title="Cancelar">¿ Está seguro que desea eliminar este usuario ?
     </b-modal>
@@ -28,11 +28,13 @@ import flatpickConfig from '@/util/flatpickConfig'
 import paginacionConfig from '@/util/paginacionConfig'
 import {getSitios} from '@/util/paths'
 import SitiosFiltro from './SitiosFiltro'
+import SitiosForm from '../form/SitiosForm'
 
 export default {
   name: 'test-listado',
   components: {
-    SitiosFiltro
+    SitiosFiltro,
+    SitiosForm
   },
   mixins: [flatpickConfig, paginacionConfig],
   data () {

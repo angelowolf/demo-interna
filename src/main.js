@@ -11,6 +11,8 @@ import store from './store/'
 import * as VueGoogleMaps from 'vue2-google-maps'
 Vue.config.productionTip = false
 
+import MapaUbicacion from '@/components/util/MapaUbicacion'
+
 import Componentes from 'componentes-vue'
 import {getPaises, getProvincias, getDepartamentos, getLocalidades} from './util/paths'
 Vue.use(Componentes,
@@ -26,6 +28,7 @@ import 'componentes-vue/dist/componentes-vue.min.css'
 import 'font-awesome/css/font-awesome.min.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+Vue.component('mapa-ubicacion', MapaUbicacion)
 Vue.use(BootstrapVue)
 Vue.use(VueGoogleMaps, {
   load: {
