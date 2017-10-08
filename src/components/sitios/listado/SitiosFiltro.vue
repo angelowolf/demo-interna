@@ -1,6 +1,6 @@
 <template>
-  <div class="row">    
-    <div class="col-12 m-t-15">
+  <div class="row m-t-15">    
+    <div class="col-lg-12">
       <div class="card">
         <div class="card-header">
           <h5>Filtros</h5>
